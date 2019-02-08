@@ -1,0 +1,431 @@
+/**************************** Estilos Menu desplegable de Pasos*********************************/
+
+#accordion .panel-heading {
+    padding: 0;
+}
+
+#accordion .panel-title> a {
+    display: block;
+    padding: 0.4em 0.6em;
+    outline: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#accordion .panel-title> a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before {
+    content: "\e113";
+    float: left;
+    font-family: 'Glyphicons Halflings';
+    margin-right: 1em;
+}
+
+#accordion .panel-title> a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before {
+    content: "\e114";
+}
+
+/**************************** Estilos General*********************************/
+
+.textoAyuda {
+    font-weight: bold;
+    font-size: 16px;
+    color: #131D5B;
+}
+
+.item .textoAyuda {
+    margin-top: -10px;
+}
+
+/**************************** Estilos Botones de Carga y Guardado de Imagen*********************************/
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-cargarImagen, #btn-guardarPNG button, #btn-guardarJPG button {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3px 0px 0px 0px;
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    -webkit-border-radius: 31px;
+    -moz-border-radius: 31px;
+    border-radius: 31px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.btn-cargarImagen:active, #btn-guardarPNG button:active, #btn-guardarJPG button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+
+.btn-cargarImagen:hover, #btn-guardarPNG button:hover, #btn-guardarJPG button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+/**************************** Estilos Canvas*********************************/
+
+#canvasMuestra, #canvasFinal {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 250px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+#canvasOriginal, #canvasFiltrado {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+.encabezadoCanvas {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/**************************** Estilos Carrusel de Filtros*********************************/
+
+.media-carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+    margin-top: 30px;
+}
+
+.media-carousel .carousel-control.left {
+    left: -12px;
+    background-image: none;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    height: 40px;
+    width: 40px;
+    margin-top: 30px
+}
+
+.media-carousel .carousel-control.right {
+    right: -12px !important;
+    background-image: none;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    height: 40px;
+    width: 40px;
+    margin-top: 30px
+}
+
+.media-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+
+.media-carousel .carousel-indicators li {
+    background: #c0c0c0;
+}
+
+.media-carousel .carousel-indicators .active {
+    background: #333333;
+}
+
+.media-carousel a {
+    height: 90px;
+    cursor: pointer;
+}
+
+.media-carousel img {
+    width: 100%;
+    height: 80px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/**************************** Estilos Botones de Filtros*********************************/
+
+#filtro-gris img {
+    background-image: url("images/filtro-gris.png");
+}
+
+#filtro-sepia img {
+    background-image: url("images/filtro-sepia.png");
+}
+
+#filtro-invertido img {
+    background-image: url("images/filtro-invertido.png");
+}
+
+#filtro-brillo img {
+    background-image: url("images/filtro-brillo.png");
+}
+
+#filtro-clonar img {
+    background-image: url("images/filtro-clonar.png");
+}
+
+#filtro-binario img {
+    background-image: url("images/filtro-binario.png");
+}
+
+#filtro-gama img {
+    background-image: url("images/filtro-gama.png");
+}
+
+#filtro-rojo img {
+    background-image: url("images/filtro-rojo.png");
+}
+
+#filtro-verde img {
+    background-image: url("images/filtro-verde.png");
+}
+
+#filtro-azul img {
+    background-image: url("images/filtro-azul.png");
+}
+
+#filtro-gama-correct img {
+    background-image: url("images/filtro-gama-correct.png");
+}
+
+#filtro-transparencia img {
+    background-image: url("images/filtro-transparencia.png");
+}
+
+/**************************** Estilos Boton de Compartir en FB*********************************/
+
+.share {
+    margin: 5px;
+    border-color: #29447e #29447e #1a356e;
+    color: #fff;
+    background-color: #5B74A8;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
+    background-image: -moz-linear-gradient(#637bad, #5872a7);
+    background-image: -o-linear-gradient(#637bad, #5872a7);
+    background-image: linear-gradient(#637bad, #5872a7);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#637bad', EndColorStr='#5872a7');
+    /* for IE 6 - 9 */
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+}
+
+.share:active {
+    border-color: #29447E;
+    background: #4F6AA3;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#maskedText {
+    display: block;
+    margin: 0 auto;
+}
+
+/**************************** Estilos Ajustes de Filtros*********************************/
+
+#boxBrillo, #boxBinario, #boxGama, #boxGamaCorrect, #boxTransparencia {
+    margin-top: -14px;
+    text-align: center;
+    display: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/**************************** Estilos Slider Ajustes*********************************/
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 11.25px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1.8px 1.8px 3.1px #000000, 0px 0px 1.8px #0d0d0d;
+    background: #c8c8c8;
+    border-radius: 5.0px;
+    border: 0.8px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 2px 2px 1px #000000, 0px 0px 2px #0d0d0d;
+    border: 1px solid #000000;
+    height: 31px;
+    width: 16px;
+    border-radius: 9px;
+    background: #0000ff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -12.05px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #dcdcdc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1.8px 1.8px 3.1px #000000, 0px 0px 1.8px #0d0d0d;
+    background: #c8c8c8;
+    border-radius: 5.0px;
+    border: 0.8px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 2px 2px 1px #000000, 0px 0px 2px #0d0d0d;
+    border: 1px solid #000000;
+    height: 31px;
+    width: 16px;
+    border-radius: 9px;
+    background: #0000ff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #b4b4b4;
+    border: 0.8px solid #010101;
+    border-radius: 10.6px;
+    box-shadow: 1.8px 1.8px 3.1px #000000, 0px 0px 1.8px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #c8c8c8;
+    border: 0.8px solid #010101;
+    border-radius: 10.6px;
+    box-shadow: 1.8px 1.8px 3.1px #000000, 0px 0px 1.8px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 2px 2px 1px #000000, 0px 0px 2px #0d0d0d;
+    border: 1px solid #000000;
+    height: 31px;
+    width: 16px;
+    border-radius: 9px;
+    background: #0000ff;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #c8c8c8;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #dcdcdc;
+}
+
+/**************************** Media Queries *********************************/
+
+@media (min-width:320px) and (max-width:340px) {
+    .media-carousel a {
+        height: 50px;
+        margin-bottom: 4px;
+    }
+    .media-carousel img {
+        height: 40px;
+    }
+}
+
+@media (min-width:320px) and (max-width:360px) {
+    .filtro h3 {
+        text-align: center;
+    }
+}
+
+@media (min-width:360px) and (max-width:700px) {
+    .media-carousel a {
+        height: 60px;
+    }
+}
+
+@media (min-width:768px) and (max-width:980px) {
+    .titulo {
+        font-size: 26px;
+    }
+    .subtitulo {
+        font-size: 12px;
+    }
+    .cuadro {
+        height: 112px;
+    }
+    #footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (min-width:1920px) and (max-width:3000px) {
+    #footer {
+        position: absolute;
+        bottom: 0;
+    }
+}

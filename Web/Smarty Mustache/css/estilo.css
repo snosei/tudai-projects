@@ -1,0 +1,226 @@
+body {
+  font-family:Tahoma, Verdana, sans-serif;
+  position: relative;
+  min-height: 800px;
+  background: -webkit-radial-gradient(grey, black); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(grey, black); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(grey, black); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(grey, black); /* Standard syntax */
+}
+
+header .container-fluid {
+  padding:0;
+  margin:0;
+  margin-bottom:15px; /*separacion del banner con el nav*/
+}
+
+.glyphicon {cursor: pointer;}
+.log {color: white;}
+.titulo{border-bottom: solid 1px #FFF; margin: 0 5%;  text-align: center;}
+.panel-heading .titulo{color: black; border-bottom: solid 1px black;}
+.scroll{overflow:auto; height: 190px; color: black; background-color: white; border-radius: 5px;}
+.scroll ul li{color: black;}
+.separacion{margin-bottom: 50px;}
+.selectpicker{color:black;}
+.dropdown-menu li a{color:white;}
+.ResaltarTabla{background-color: black;	opacity: 0.6;}
+.ResaltarPrograma{font-size: 21px;  font-weight: bold;}
+.navbar-centrar{float: none;  display: inline-block;  vertical-align: middle;
+/*No esta implementado en bootstrap, lo creamos para centrar la barra de navegacion*/}
+.navbar-brand{position: absolute; list-style: none;}
+.navbar-collapse{text-align: center;}
+.Logos{width: 22px; height: 22px;}
+.panel-body,.pull-left .titulo{color:black}
+
+
+article{
+	padding: 1% 1%;
+	background-color: black;
+	opacity: 0.8;
+	border-radius: 10px;
+	color: white;
+	font-size: 16.5px;
+	min-height: 100px;
+	margin-bottom: 300px;
+}
+article h2{  font-family:Tahoma;  font-style: italic;}
+
+input{color:black;}
+
+/*Estilos de los contenidos*/
+.ColorEnlace:link , .ColorEnlace:visited, article ul li a:link , article ul li a:visited{ color: #FFFFFF; }
+.ColorEnlace:hover, .ColorEnlace:active, article ul li a:hover, article ul li a:active{ color: #FF7F19; }
+
+#home:visited,#home:link{color: gray;}
+#home:hover,#home:active{color: #FFFFFF; }
+#logoflisol{	display:block;	margin-left: auto;}
+
+thead{font-size: 22px;  text-align: center; font-family:Tahoma;}
+tbody{font-size: 20px;}
+tbody tr td{text-align: center; font-style: italic;}
+thead, .resaltar{font-style: italic;  font-weight: bold;}
+
+.Terminal{
+	font-family: "Roboto Mono","Consolas","monaco","monospace";
+	background-image: url('images/terminal.png');
+	background-repeat: no-repeat;
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	padding: 30px 9px 9px 10px;
+	background-color:#300a24;
+	text-align:center;
+	margin:0 15%;
+}
+
+#TuxEstatico{
+	background-image: url('images/tuxestatico.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: fixed;
+	right: 10px;
+	bottom: 1%;
+	height: 160px;
+	width: 100px;
+}
+
+footer .container{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	background-color: black;
+	opacity: 0.8;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 16.5px;
+}
+
+/*Inicio de los efectos del listado de las noticias*/
+.img-responsive{width: 250px; height:100px;}
+.img-noticia {width:500px;  height:400px;}
+.box {
+  transition:all 0.2s ease;
+  border:2px dashed #dadada;
+  margin: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-clip: padding-box;
+  min-height:450px;
+  max-height:450px;
+}
+.box:hover {border:2px solid white;}
+.box .box-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.box .box-content p {color:#515c66;  text-transform:none;}
+.box h5{color:gray; text-align: left; opacity: 0.6;}
+.box h3{text-transform: capitalize; font-family: tahoma; color: #FFFFFF;}
+.box #btn{margin-top: 2%; margin-bottom: 2%;}
+.btn-gradiente{
+ border:1px solid #2a2c2f; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif;
+ /*padding: 10px 10px 10px 10px;*/
+ text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #45484d; background-image: -webkit-gradient(linear, left top, left bottom, from(#45484d), to(#000000));
+ background-image: -webkit-linear-gradient(top, #45484d, #000000);
+ background-image: -moz-linear-gradient(top, #45484d, #000000);
+ background-image: -ms-linear-gradient(top, #45484d, #000000);
+ background-image: -o-linear-gradient(top, #45484d, #000000);
+ background-image: linear-gradient(to bottom, #45484d, #000000);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#45484d, endColorstr=#000000);
+}
+.btn-gradiente:hover{
+  border:1px solid #2a2c2f; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif;
+  /*padding: 10px 10px 10px 10px;*/
+  text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+  background-color: #45484d; background-image: -webkit-gradient(linear, left bottom, left top, from(#45484d), to(#000000));
+  background-image: -webkit-linear-gradient(bottom, #45484d, #000000);
+  background-image: -moz-linear-gradient(bottom, #45484d, #000000);
+  background-image: -ms-linear-gradient(bottom, #45484d, #000000);
+  background-image: -o-linear-gradient(bottom, #45484d, #000000);
+  background-image: linear-gradient(to top, #45484d, #000000);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#45484d, endColorstr=#000000);
+}
+/*Fin de los estilos del listado*/
+
+/*Color al pasar por encima y apretar del link copyleft*/
+#copyleft:link, #copyleft:visited,#home{	text-decoration: none;	color: grey;	}
+#copyleft:hover, #copyleft:active{	color: #FF7F19;	}
+
+ul.dropdown-lr {  width: 300px; }
+
+/* mobile fix */
+@media (max-width: 768px) {
+  .dropdown-lr h3 {color: #eee;	}
+	.dropdown-lr label {color: #eee; }
+}
+
+/*Estilos de redimensionamiento de la pagina*/
+@media only screen and (min-width:980px), only screen and (min-width:800px){
+  .box { width: 280px;  display: inline-block; display: inline-block; vertical-align: middle;}
+}
+@media only screen and (min-width:768px){
+  .box { width: 270px;  display: inline-block; display: inline-block; vertical-align: middle;}
+}
+@media only screen and (max-width:360px){
+  .box { width: 240px; min-height:350px;  max-height:350px; display: inline-block;  vertical-align: middle;}
+}
+@media only screen and (max-width:320px){
+  .box { width: 200px; min-height:350px;  max-height:350px; display: inline-block;  vertical-align: middle;}
+  .tag-title{ font-size:14px; }
+  .box-content h5 { font-size: 11px;}
+}
+
+@media only screen and (max-width:768px){
+	.btn, article{  font-size: 12.5px }
+	footer .container { font-size: 10.5px; height: 40px; }
+	.navbar-centrar{  display: block;  }
+  .ResaltarPrograma{  font-size: 16px;  }
+  #TuxEstatico{ right: 5px; height: 128px;  width: 80px;  }
+  #logoflisol{ height: 71px;  width: 157px  }
+}
+
+@media only screen and (max-width:450px){
+  #TuxEstatico{ right: 2.5px; height: 64px;  width: 40px;  }
+  #logoflisol{ height: 49.7px;  width: 109.9px  }
+  .btn, article{  font-size: 10.5px }
+}
+
+@media (max-width: 981px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        text-align: left;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}

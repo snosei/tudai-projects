@@ -1,0 +1,5 @@
+  <li id="noticia{{id_noticia}}" class="list-group-item">
+    <a class="glyphicon glyphicon-trash borrarNot" id='{{id_noticia}}'></a>
+    <a class="glyphicon glyphicon-pencil modificarNot" id='{{id_noticia}}'></a>
+    <span>{{titulo}}</span>
+  </li>

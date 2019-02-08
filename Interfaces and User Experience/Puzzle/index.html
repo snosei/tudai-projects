@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MindCrush</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="css/estilos_principal.css" rel="stylesheet"></link>
+	<link href="css/estilos_rompecabeza.css" rel="stylesheet"></link>
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet"></link>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></link>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"></link>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav id="menu" class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img alt="Brand" src="images/logo.png"></a>
+				<a class="navbar-brand" href="index.html">MindCrush</a>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li menu="main" class="active"><a href="index.html">Inicio</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="encapsulador" class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<article id="zonas">
+
+					<div id="zona-inicio">
+						<div class="container">
+							<div class='row text-center'>
+								<h2>Bienvenido a MindCrush</h2>
+								<p class="textoAyuda">Diviertase con desafiantes rompecabezas</p>
+								<img src="images/puzzle.png"></img>
+								<hr></hr>
+								<button class="general" id="instrucciones" back="inicio" type="button">Instrucciones</button>
+								<button class="avanzar" id="jugar-galeria" back="inicio" type="button">Jugar</button>
+							</div>
+						</div>
+					</div>
+
+					<div id="zona-instrucciones">
+						<div class="container">
+							<div class='row text-center'>
+								<h2>Instrucciones para Jugar</h2>
+								<p class="textoAyuda">Paso 1: Elija un Rompecabezas </p>
+								<p class="textoAyuda">Paso 2: Elija un nivel de Dificultad </p>
+								<p class="textoAyuda">Paso 3: Seleccione y arrastre cada pieza de la izquierda a su respectiva posicion de la derecha </p>
+								<p class="textoAyuda">Si necesita ayuda presione el boton Ayuda que le mostrara como deberia quedar el rompecabezas ordenado </p>
+								<p class="textoAyuda">¡A divertirse!</p>
+								<hr></hr>
+								<button class="atras" id="inicio" back="instrucciones" type="button">Atras</button>
+							</div>
+						</div>
+					</div>
+
+					<div id="zona-jugar-galeria">
+						<div class="container">
+							<div class='row text-center'>
+								<h2>Rompecabezas Disponibles</h2>
+								<hr></hr>
+								<div class='list-group gallery'>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_1" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_2" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_3" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_4" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_5" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_6" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_7" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+									<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+										<a id="imagen_8" class="thumbnail" rel="ligthbox">
+											<img class="img-responsive" alt="" />
+										</a>
+									</div>
+								</div>
+								<img id="imagen-popup"></img>
+								<button class="atras" id="inicio" back="jugar-galeria" type="button">Atras</button>
+								<button class="avanzar" id="jugar-dificultad" back="jugar-galeria" type="button">Siguiente</button>
+							</div>
+						</div>
+					</div>
+
+					<div id="zona-jugar-dificultad">
+						<div class="container">
+							<div class='row text-center'>
+								<h2>Seleccione el nivel de dificultad</h2>
+								<hr></hr>
+								<div>
+									<div class="btn-group" data-toggle="buttons">
+										<label class="btn btn-success " dificultad="0">
+											<input type="radio" name="options" id="option2" autocomplete="off" chacked>
+											<span class="glyphicon glyphicon-baby-formula"></span><p>Bebe</p>
+										</label>
+										<label class="btn btn-primary active" dificultad="1">
+											<input type="radio" name="options" id="option1" autocomplete="off">
+											<span><i class="fa fa-smile-o fa-2x" aria-hidden="true"></i></span><p>Facil</p>
+										</label>
+										<label class="btn btn-warning" dificultad="2">
+											<input type="radio" name="options" id="option2" autocomplete="off">
+											<span><i class="fa fa-meh-o fa-2x" aria-hidden="true"></i></span><p>Media</p>
+										</label>
+										<label class="btn btn-danger" dificultad="3">
+											<input type="radio" name="options" id="option2" autocomplete="off">
+											<span><i class="fa fa-frown-o fa-2x" aria-hidden="true"></i></span><p>Dificil</p>
+										</label>
+									</div>
+								</div>
+								<p id="txt-ayuda"></p>
+								<hr></hr>
+								<button class="atras" id="jugar-galeria" back="jugar-dificultad" type="button">Atras</button>
+								<button class="avanzar" id="rompecabezas" back="jugar-dificultad" type="button">Comenzar</button>
+							</div>
+						</div>
+					</div>
+
+					<div id="zona-rompecabezas">
+						<div class="container">
+							<div class='row text-center'>
+								<p class="pull-left">Dificultad: <span id="txt-dificultad"></span> Tiempo: <span id="txt-tiempo"></span></p>
+								<button class="pull-right atras" id="inicio" back="rompecabezas" type="button">Menu</button>
+								<button class="pull-right general" id="imagen-ayuda" type="button">Ayuda</button>
+							</div>
+						</div>
+						<canvas id="canvasGhost" class="visible-xs"></canvas>
+						<canvas id="canvasOriginal"></canvas>
+					</div>
+
+				</article>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="footer">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="container-fluid text-center">
+					<p class="pull-left">Santiago Nosei | Estudiante de la carrera TUDAI | Catedra: Interfaces de Usuario e Interaccion | <a href="mailto:snosei92@gmail.com" target="_blank" title="Contactame!"><i class="fa fa-envelope"></i> Contacto</a>
+					</p>
+					<p class="pull-right">Redes Sociales: <a href="https://www.facebook.com/snorimay" target="_blank"><i id="social" class="fa fa-facebook-square fa-2x social-fb"></i></a>
+						<a href="https://twitter.com/snorimay" target="_blank"><i id="social" class="fa fa-twitter-square fa-2x social-tw"></i></a>
+						<a href="https://plus.google.com/u/0/102825697163842764087" target="_blank"><i id="social" class="fa fa-google-plus-square fa-2x social-gp"></i></a>
+						<a href="https://www.instagram.com/santiagonosei/" target="_blank"><i id="social" class="fa fa-instagram fa-2x social-ins"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--Necesaria para manejar la galeria y el popup de la ayuda-->
+	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<!--Necesaria para manejar el contador durante el juego-->
+	<script type="text/javascript" src="js/easytimer.js"></script>
+	<script type="text/javascript" src="js/accionesmenu.js"></script>
+	<!--Necesarias para el funcionamiento del rompecabezas-->
+	<script type="text/javascript" src="js/formas.js"></script>
+	<script type="text/javascript" src="js/grilla.js"></script>
+	<script type="text/javascript" src="js/rompecabeza.js"></script>
+
+</body>
+
+</html>

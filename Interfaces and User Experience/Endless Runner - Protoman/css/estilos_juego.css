@@ -1,0 +1,294 @@
+#game{
+  width: 1000px;
+  height: 400px;
+}
+
+/****************Estilos del Fondo*****************/
+#background{
+  position: absolute;
+  width: 1000px;
+	height: 400px;
+	background: url("images/background.png") repeat-x;
+  background-position: 0px 0px;
+}
+
+#floor{
+  position: absolute;
+  top: 400px;
+  width: 1000px;
+	height: 80px;
+	background: url("images/floor.png") repeat-x;
+  background-position: 0px 0px;
+}
+
+@keyframes fondo-animado {
+  0%   { background-position: 0px 0; }
+  100% { background-position: -1000px 0; }
+}
+
+.bg-moving{
+  animation: fondo-animado 12s linear infinite;
+}
+
+.f-moving{
+  animation: fondo-animado 3s linear infinite;
+}
+
+/****************Estilos del Personaje*****************/
+#player{
+  width: 100px;
+	height: 80px;
+  top: 340px;
+	position: absolute;
+}
+
+@keyframes move {
+  0%   { background-position: 0px 0px;}
+  100% { background-position: -1000px 0px;}
+}
+
+@keyframes shoot {
+  0%   { background-position: 0px 0px;}
+  100% { background-position: -1000px 0px;}
+}
+
+@keyframes spawn {
+  100% { background-position: -700px 0px;}
+}
+
+@keyframes idle {
+  100% { background-position: -400px 0px;}
+}
+
+@keyframes shield {
+  100% { background-position: -400px 0px;}
+}
+
+@keyframes jump {
+  25% {transform: translate(0px, -70px);}
+  50% {transform: translate(0px, -100px);}
+  75% {transform: translate(0px, -70px);}
+  100% {transform: translate(0px, 0px); background-position: -376px 0px;}
+}
+
+.shield{
+	background: url("images/player-shield.png");
+	animation: shield 0.8s infinite steps(4);
+}
+
+.shoot{
+	background: url("images/player-shoot.png");
+	animation: shoot 0.8s infinite steps(10);
+}
+
+.jump{
+	background: url("images/player-jump.png");
+	animation: jump 0.8s 1 steps(4);
+}
+
+.idle{
+	background: url("images/player-idle.png");
+	animation: idle 0.8s infinite steps(4) alternate;
+}
+
+.spawn{
+	background: url("images/player-spawn.png");
+	animation: spawn 0.8s 1 steps(7);
+}
+
+.running{
+	background: url("images/player-running.png");
+	animation: move 0.8s infinite steps(10);
+}
+
+.hit{
+	background: url("images/player-hit.png");
+}
+
+/****************Estilos de los Enemigos*****************/
+#enemy{
+  width: 70px;
+  height: 64px;
+  top: 325px;
+  left: 930px;
+  position: absolute;
+}
+
+@keyframes idle-enemy {
+  100% {background-position: -420px 0px;}
+}
+
+@keyframes enemy-move {
+  100% {transform: translate(-930px, 0px);}
+}
+
+@keyframes enemy-fly {
+  100% {transform: rotate(360deg);}
+}
+
+.idle-enemy-slime{
+	background: url("images/enemy-slime.png");
+	animation: idle-enemy 0.8s infinite steps(6);
+}
+
+.idle-enemy-mettaur{
+	background: url("images/enemy-mettaur.png");
+	animation: idle-enemy 0.8s infinite steps(6);
+}
+
+.idle-enemy-swordy{
+	background: url("images/enemy-swordy.png");
+	animation: idle-enemy 0.8s infinite steps(6);
+}
+
+.enemy-explosion{
+  background: url("images/enemy-explosion.png");
+}
+
+.enemy-fly{
+  background: url("images/flymettaur.png");
+  animation: enemy-fly 0.8s linear 1;
+}
+
+.move{
+  animation: enemy-move 3s linear 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/****************Estilos del Item*****************/
+#item{
+  width: 30px;
+  height: 30px;
+  top: 230px;
+  left: 930px;
+  position: absolute;
+}
+
+@keyframes idle-item {
+  100% {background-position: -240px 0px;}
+}
+
+.idle-item{
+	background: url("images/item.png") left center;
+	animation: idle-item 0.8s infinite steps(8);
+}
+
+/****************Estilos de los mensajes y el Menu*****************/
+.game_over{
+  position:absolute;
+  top: 100px;
+  width:600px;
+  height:226px;
+  z-index: 8;
+  background: url("images/gameover.png");
+  cursor: pointer;
+}
+
+.intro-menu{
+  position:absolute;
+  z-index: 6;
+  width: 1000px;
+  height: 445px;
+  background: url("images/intro-fondo.png");
+}
+
+@keyframes intro-protoman-move{
+  100% {background-position: -612px 0px;}
+}
+
+@keyframes opcion-move{
+  100% {background-position: -784px 0px;}
+}
+
+
+.protoman-menu{
+  position:absolute;
+  top: 200px;
+  z-index: 7;
+  width: 204px;
+  height: 204px;
+  background: url("images/intro-protoman.png") left center;
+  animation: intro-protoman-move 0.8s infinite steps(3);
+}
+
+.opcion1{
+  position:absolute;
+  top: 300px;
+  z-index: 7;
+  width: 392px;
+  height: 34px;
+  background: url("images/intro-press_start.png");
+}
+
+.opcion1.selected{
+  background: url("images/intro-press_start.png");
+  animation: opcion-move 0.8s infinite steps(2);
+}
+
+.opcion2{
+  position:absolute;
+  top: 350px;
+  z-index: 7;
+  width: 392px;
+  height: 34px;
+  background: url("images/intro-instruction.png");
+}
+
+.opcion2.selected{
+  background: url("images/intro-instruction.png");
+  animation: opcion-move 0.8s infinite steps(2);
+}
+
+#cartelesInicioJuego{
+  position:absolute;
+  top: 200px;
+}
+
+.juego-ready{
+  width: 313px;
+  height: 109px;
+  background: url("images/juego-ready.png");
+}
+
+.juego-go{
+  width: 156px;
+  height: 109px;
+  background: url("images/juego-go.png");
+}
+
+#instrucciones{
+  display:none;
+  position:absolute;
+  z-index: 12;
+  width: 1000px;
+  height: 445px;
+  background: url("images/instrucciones.png");
+}
+
+.back_menu{
+  display:none;
+  position:absolute;
+  top: 400px;
+  z-index: 13;
+  width: 392px;
+  height: 34px;
+  background: url("images/intro-back_menu.png");
+}
+
+.back_menu.selected{
+  background: url("images/intro-back_menu.png");
+  animation: opcion-move 0.8s infinite steps(2);
+}
+
+#zona-juego p{
+  font-size: 16px;
+  font-weight: bold;
+  margin:0;
+
+}
+
+#zona-juego span{
+  font-size: 20px;
+  color: #131D5B;
+  margin-right: 8px;
+}

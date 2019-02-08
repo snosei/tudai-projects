@@ -1,0 +1,6 @@
+<li id="distro{{id_distro}}" class="list-group-item">
+  <a class="glyphicon glyphicon-trash borrarDist" id='{{id_distro}}'></a>
+  <a class="glyphicon glyphicon-pencil modificarDist" id='{{id_distro}}'></a>
+  <span class="priSpan">{{nombre}}</span>
+  <span class="segSpan">{{arquitectura}}</span>
+</li>

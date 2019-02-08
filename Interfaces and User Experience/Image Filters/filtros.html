@@ -1,0 +1,221 @@
+<div class="container filtro">
+	<div class='row'>
+		<h3>Pasos a seguir para aplicar filtros a su imagen:</h3>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					Paso 1: Cargue una imagen
+				</a>
+			</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						<div class='col-md-6'>
+							<p class="textoAyuda">Pulse el boton Buscar Imagen para seleccionar una imagen a cargar de su equipo: </p>
+							<label for="btn-imagen" class="btn-cargarImagen">Buscar Imagen</label>
+							<input id="btn-imagen" type="file"></input>
+						</div>
+						<hr class="visible-xs"></hr>
+						<div class='col-md-6 text-center'>
+							<p class="encabezadoCanvas">Imagen Cargada</p>
+							<canvas id="canvasMuestra"></canvas>
+						</div>
+
+						<div class='col-md-12'>
+							<hr></hr>
+							<p class="textoAyuda">Cuando este conforme con la imagen cargada proceda al Paso 2.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					Paso 2: Aplique el filtro que desee
+				</a>
+			</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+						<div class='col-md-12'>
+
+							<div class="row">
+								<div class='col-md-6 col-lg-6 col-sm-6 col-xs-12 text-center'>
+									<div>
+										<p class="encabezadoCanvas">Imagen original</p>
+										<canvas id="canvasOriginal"></canvas>
+									</div>
+								</div>
+								<div class='col-md-6 col-lg-6 col-sm-6 col-xs-12 text-center'>
+									<div>
+										<p class="encabezadoCanvas">Imagen resultado</p>
+										<canvas id="canvasFiltrado"></canvas>
+									</div>
+								</div>
+							</div>
+							<hr></hr>
+
+							<div class="row">
+								<div class='col-md-6 col-md-offset-3 col-xs-12 col-sm-12'>
+									<form id="boxBrillo">
+										<p>Ajustes</p>
+
+										<label for="bright">Nivel de brillo:</label>
+										<input id="slide-brillo" type="range" data-show-value="true" name="bright" id="bright" value=0 min=-128 max=128>
+
+									</form>
+									<form id="boxBinario">
+										<p>Ajustes
+											<p>
+												<label for="binarization">Nivel de binarizacion:</label>
+												<input id="slide-binario" type="range" data-show-value="true" name="binarization" id="binarization" value=50 min=50 max=200>
+									</form>
+									<form id="boxGama">
+										<p>Ajustes
+											<p>
+												<label for="gamaRed">Nivel de Rojo:</label>
+												<input id="slide-gama-red" type="range" data-show-value="true" name="gamaRed" id="gamaRed" value=0 min=0 max=128>
+												<p></p>
+												<label for="gamaGreen">Nivel de Verde:</label>
+												<input id="slide-gama-green" type="range" data-show-value="true" name="gamaGreen" id="gamaGreen" value=0 min=0 max=128>
+												<p></p>
+												<label for="gamaBlue">Nivel de Azul:</label>
+												<input id="slide-gama-blue" type="range" data-show-value="true" name="gamaBlue" id="gamaBlue" value=0 min=0 max=128>
+									</form>
+									<form id="boxGamaCorrect">
+										<p>Ajustes
+											<p>
+												<label for="correct">Nivel de Coreccion:</label>
+												<input id="slide-gama-correct" type="range" data-show-value="true" name="correct" id="correct" value=0 min=2 max=10>
+									</form>
+									<form id="boxTransparencia">
+										<p>Ajustes</p>
+										<label for="transparencia">Nivel de Transparencia:</label>
+										<input id="slide-transparencia" type="range" data-show-value="true" name="transparencia" id="transparencia" value=0 min=0 max=255>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1">
+									<div class="carousel slide media-carousel" id="media">
+										<div class="carousel-inner">
+											<div class="item  active">
+												<div class="row text-center">
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-gris" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Grises</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-sepia" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Sepia</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-invertido" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Invertidos</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-brillo" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Brillo</p>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="row text-center">
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-clonar" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Clonar</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-binario" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Binarizacion</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-gama" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Colores</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-rojo" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Rojorizacion</p>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="row text-center">
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-verde" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Verderizacion</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-azul" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Azurizacion</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-gama-correct" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Correccion</p>
+													</div>
+													<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6">
+														<a id="filtro-transparencia" class="thumbnail"><img alt=""></a>
+														<p class="textoAyuda">Transparencia</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+										<a data-slide="next" href="#media" class="right carousel-control">›</a>
+									</div>
+								</div>
+							</div>
+							<p class="textoAyuda">Elija uno de los filtros de arriba para aplicarlo a su imagen, si quiere ver más presione los botones de los costados.</p>
+							<hr></hr>
+							<p class="textoAyuda">Cuando este conforme con la imagen resultado proceda al Paso 3.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+				<a id="pasoTres" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					Paso 3: Guarde su imagen en su equipo o compartala en facebook
+				</a>
+			</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body">
+						<div class="row">
+							<div class='col-md-6 col-md-offset-3 text-center'>
+								<p class="encabezadoCanvas">Imagen final a Guardar/Compartir</p>
+								<canvas id="canvasFinal"></canvas>
+							</div>
+						</div>
+						<hr></hr>
+						<div class="row">
+							<div class='col-md-6 col-lg-6 col-sm-6 col-xs-12'>
+								<p class="textoAyuda">Presione el boton Guardar Imagen que mas le parezca, segun el formato de imagen que quiere, para guardar la imagen filtrada en su <abbr title="Considere que PNG es un formato mas pesado que JPG">equipo</abbr>.</p>
+								<a id="btn-guardarPNG" download="miFotoFiltrada.png"><button type="button">Guardar Imagen PNG</button></a>
+								<a id="btn-guardarJPG" download="miFotoFiltrada.jpg"><button type="button">Guardar Imagen JPG</button></a>
+							</div>
+
+							<div class='col-md-6 col-lg-6 col-sm-6 col-xs-12'>
+								<hr class="visible-xs"></hr>
+								<p class="textoAyuda">Para compartir la imagen filtrada complete el campo a continuacion con lo que quiere que aparezca en su muro y luego presione el boton Compartir Imagen.</p>
+								<textarea class="form-control" id="maskedText" rows="3" placeholder="Mensaje que aparecera junto con su imagen"></textarea>
+								<button id="btn-compartir" type="button" class="share btn btn-primary" onclick="postCanvasToFacebook()">Compartir imagen <i class="fa fa-facebook fa-1x"></i></button>
+							</div>
+						</div>
+						<hr></hr>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/comportamiento_filtros.js"></script>
+<script type="text/javascript" src="js/base64binary.js"></script>
+<script type="text/javascript" src="js/compartirFB.js"></script>

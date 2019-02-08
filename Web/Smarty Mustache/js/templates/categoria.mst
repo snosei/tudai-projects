@@ -1,0 +1,5 @@
+  <li id="categoria{{nombre}}" class="list-group-item">
+    <a class="glyphicon glyphicon-trash borrarCat" nombre='{{nombre}}'></a>
+    <a class="glyphicon glyphicon-pencil modificarCat" nombre='{{nombre}}'></a>
+    <span>{{nombre}}</span>
+  </li>

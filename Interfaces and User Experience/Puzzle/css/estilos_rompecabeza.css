@@ -1,0 +1,166 @@
+#zona-rompecabezas, #zona-instrucciones, #zona-jugar-galeria, #zona-jugar-dificultad{
+  display: none;
+}
+
+#zona-instrucciones .container, #zona-jugar-galeria .container, #zona-jugar-dificultad .container, #zona-inicio .container{
+  min-height: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#imagen_1 img, #imagen_2 img, #imagen_3 img, #imagen_4 img, #imagen_5 img, #imagen_6 img,
+#imagen_7 img, #imagen_8 img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 110px;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+
+#zona-jugar-galeria a{
+  opacity: 0.7;
+  width: 250px;
+  height: 120px;
+  margin-bottom: 4px;
+}
+
+#zona-jugar-galeria a:hover, #zona-jugar-galeria .active{
+  opacity: 1.0;
+}
+
+#zona-jugar-galeria #imagen-popup{
+  display:none;
+}
+
+#imagen_1 img{
+  background-image: url("images/imagen1.jpg");
+}
+
+#imagen_2 img{
+  background-image: url("images/imagen2.jpg");
+}
+
+#imagen_3 img{
+  background-image: url("images/imagen3.jpg");
+}
+
+#imagen_4 img{
+  background-image: url("images/imagen4.jpg");
+}
+
+#imagen_5 img{
+  background-image: url("images/imagen5.jpg");
+}
+
+#imagen_6 img{
+  background-image: url("images/imagen6.jpg");
+}
+
+#imagen_7 img{
+  background-image: url("images/imagen7.jpg");
+}
+
+#imagen_8 img{
+  background-image: url("images/imagen8.jpg");
+}
+
+button{
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3px 0px 0px 0px;
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    border-top: 1px solid #FFFFFF;
+    -webkit-border-radius: 31px;
+    -moz-border-radius: 31px;
+    border-radius: 31px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.atras{
+  background: #770000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF8888), to(#770000));
+  background: -webkit-linear-gradient(top, #FF8888, #770000);
+  background: -moz-linear-gradient(top, #FF8888, #770000);
+  background: -ms-linear-gradient(top, #FF8888, #770000);
+  background: -o-linear-gradient(top, #FF8888, #770000);
+}
+
+.avanzar{
+  background: #007700;
+  background: -webkit-gradient(linear, left top, left bottom, from(#88FF88), to(#007700));
+  background: -webkit-linear-gradient(top, #88FF88, #007700);
+  background: -moz-linear-gradient(top, #88FF88, #007700);
+  background: -ms-linear-gradient(top, #88FF88, #007700);
+  background: -o-linear-gradient(top, #88FF88, #007700);
+}
+
+.general{
+  background: #000077;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8888FF), to(#000077));
+  background: -webkit-linear-gradient(top, #8888FF, #000077);
+  background: -moz-linear-gradient(top, #8888FF, #000077);
+  background: -ms-linear-gradient(top, #8888FF, #000077);
+  background: -o-linear-gradient(top, #8888FF, #000077);
+}
+
+.textoAyuda {
+    font-weight: bold;
+    font-size: 16px;
+    color: #131D5B;
+}
+
+.glyphicon.glyphicon-baby-formula {
+    font-size: 28px;
+}
+
+.btn p{
+  font-size: 20px;
+  font-weight: bold;
+  margin:0;
+}
+
+#zona-jugar-dificultad #txt-ayuda{
+  font-size: 16px;
+  font-weight: bold;
+  margin:0;
+  margin-top: 20px;
+  color: #131D5B;
+}
+
+#zona-rompecabezas p{
+  font-size: 16px;
+  font-weight: bold;
+  margin:0;
+
+}
+
+#zona-rompecabezas span{
+  font-size: 20px;
+  color: #131D5B;
+  margin-right: 8px;
+}
+
+.fancybox-close {
+display:inline !important;
+top: -7px !important;
+right: 1px !important;
+width: 28px !important;
+height: 30px !important;
+
+}
